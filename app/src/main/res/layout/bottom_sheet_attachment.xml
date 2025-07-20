@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:icon="@drawable/ic_galery"
+        android:backgroundTint="@color/white"
+        app:iconTint="@color/galery_color"
+        app:iconGravity="top"
+        app:iconPadding="4dp"
+        app:iconSize="40dp"
+        android:textColor ="@android:color/black"
+        android:textSize="8sp"
+        android:text="Galery" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:icon="@drawable/ic_camera"
+        android:backgroundTint="@color/white"
+        app:iconTint="@color/camera_color"
+        app:iconGravity="top"
+        app:iconPadding="4dp"
+        app:iconSize="40dp"
+        android:textColor ="@android:color/black"
+        android:textSize="8sp"
+        android:text="Camera" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:icon="@drawable/ic_document"
+        android:backgroundTint="@color/white"
+        app:iconTint="@color/document_color"
+        app:iconGravity="top"
+        app:iconPadding="4dp"
+        app:iconSize="40dp"
+        android:textColor ="@android:color/black"
+        android:textSize="8sp"
+        android:text="Document" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:icon="@drawable/ic_audio"
+        android:backgroundTint="@color/white"
+        app:iconTint="@color/audio_color"
+        app:iconGravity="top"
+        app:iconPadding="4dp"
+        app:iconSize="40dp"
+        android:textColor ="@android:color/black"
+        android:textSize="8sp"
+        android:text="Audio" />
+
+
+</LinearLayout>
