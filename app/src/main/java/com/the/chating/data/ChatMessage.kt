@@ -1,4 +1,4 @@
-package com.the.chating.chating
+package com.the.chating.data
 
 data class ChatMessage(
     var messageId: String = "",

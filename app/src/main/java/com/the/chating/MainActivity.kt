@@ -1,9 +1,12 @@
 package com.the.chating
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.the.chating.databinding.ActivityMainBinding
-import com.the.chating.chating.ChatFragment
+import com.the.chating.ui.chating.ChatFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,12 +17,6 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        var fragment = ChatFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.main_frag, fragment)
-            .addToBackStack(null)
-            .commit()
 
     }
 }

@@ -1,0 +1,17 @@
+## Chating
+
+Android app for make post
+
+## Technologies
+-Kotlin
+-Firebase
+-Clean architecture
+-Coroutines
+-Navigation component
+-MVVM
+
+## Possibilities
+-Registration in the app
+-Login
+-Send text message to other users
+-Send image, video and other different types of files to other users

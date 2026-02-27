@@ -39,7 +39,6 @@ object PdfPreviewHelper {
                 }
 
             } catch (e: Exception) {
-//                Log.e("PDF_PREVIEW", "Exception: ${e.message}")
                 withContext(Dispatchers.Main) {
                     imageView.setImageResource(android.R.drawable.ic_delete)
                     Toast.makeText(context, "Failde download PDF", Toast.LENGTH_SHORT).show()

@@ -1,4 +1,4 @@
-package com.the.chating.chating
+package com.the.chating.ui.chating
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.the.chating.PdfPreviewHelper
 import com.the.chating.R
+import com.the.chating.data.ChatMessage
 import com.the.chating.databinding.ItemConstantReceiverMessageBinding
 import com.the.chating.databinding.ItemConstantSendMessageBinding
 
@@ -23,6 +24,11 @@ class ChatAdapter (
     private val receiverProfileImageUrl: String? = null,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    fun updateMessages(newMessages: List<ChatMessage>) {
+        chatMessages.clear()
+        chatMessages.addAll(newMessages)
+        notifyDataSetChanged()
+    }
 
     companion object {
         const val VIEW_TYPE_SENT: Int = 1
@@ -56,7 +62,6 @@ class ChatAdapter (
             VIEW_TYPE_SENT -> (holder as SentMessageViewHolder).bind(chatMessage)
             VIEW_TYPE_RECEIVED -> (holder as ReceivedMessageViewHolder).bind(chatMessage)
         }
-
 
     }
 
@@ -116,8 +121,6 @@ class ChatAdapter (
                             Glide.with(binding.fileImageView.context)
                                 .load(chatMessage.fileUrl)
                                 .into(binding.fileImageView)
-
-
                         }
 
                         chatMessage.fileType?.startsWith("video") == true -> {
@@ -142,7 +145,6 @@ class ChatAdapter (
                                 chatMessage.fileUrl ?: "",
                                 binding.pdfLayout.pdfThumbnail
                             )
-
 
                         }
 
